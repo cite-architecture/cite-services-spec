@@ -40,15 +40,24 @@ The `texts` microservice works with the smallest unit of the OHCO2 model: citabl
 >
 > `/service name/request?/URN value?/format?`
 
+| URL                     | Meaning                                           | Return value                                    |
+|:------------------------|:--------------------------------------------------|:------------------------------------------------|
+| `/texts`                | list distinct works appearing in cited text nodes | (unordered) list of work-level URNs             |
+| `/texts/{URN}`          | retrieve a passage of text                        | (possibly empty, ordered) list of citable nodes |
+| `/texts/first/{URN}`    | retrieve first node of text                       | 0 or 1 citable node                             |
+| `/texts/last/{URN}`     | retrieve last node of text                        | 0 or 1 citable node                             |
+| `/texts/previous/{URN}` | retrieve node preceding {URN}                     | 0 or 1 citable node                             |
+| `/texts/next/{URN}`     | retrieve node following {URN}                     | 0 or 1 citable node                             |
+
+{++ 
+
 | URL                   | Meaning                                           | Return value                                    |
 |:----------------------|:--------------------------------------------------|:------------------------------------------------|
-| `/texts`              | list distinct works appearing in cited text nodes | (unordered) list of work-level URNs             |
-| /texts/{URN}          | retrieve a passage of text                        | (possibly empty, ordered) list of citable nodes |
-| /texts/first/{URN}    | retrieve first node of text                       | 0 or 1 citable node                             |
-| /texts/last/{URN}     | retrieve last node of text                        | 0 or 1 citable node                             |
-| /texts/previous/{URN} | retrieve node preceding {URN}                     | 0 or 1 citable node                             |
-| /texts/next/{URN}     | retrieve node following {URN}                     | 0 or 1 citable node                             |
+| /texts/urns/{URN}     | retrieve a list of URNs                           | (possibly empty, ordered) list of URNs          |
 
+{>> CWB: For efficiency, it would be helpful to have the option to get URNs alone, without having to retrieve full citable nodes <<}
+
+++}
 
 ## Replies
 
