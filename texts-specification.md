@@ -40,7 +40,7 @@ The `texts` microservice works with the smallest unit of the OHCO2 model: citabl
 >
 > `/service name/request?/URN value?/format?`
 
-| Request               | Meaning                                           | Return value                                    |
+| URL                   | Meaning                                           | Return value                                    |
 |:----------------------|:--------------------------------------------------|:------------------------------------------------|
 | `/texts`              | list distinct works appearing in cited text nodes | (unordered) list of work-level URNs             |
 | /texts/{URN}          | retrieve a passage of text                        | (possibly empty, ordered) list of citable nodes |
@@ -70,4 +70,4 @@ The `texts` microservice works with the smallest unit of the OHCO2 model: citabl
 
 In any request, a syntactically invalid URN is an exception.
 
-Requests including syntactically valid URNs that match no results are valid. In these cases, replies include an empty list of URNs or citable nodes. 
+Requests including syntactically valid URNs that match no results are valid. In these cases, replies include an empty list of URNs or citable nodes.
