@@ -52,3 +52,5 @@ I'm guessing we're looking at something like this:
     }
 
 Should previous/following values be a JSON empty string or a `null` value when there is no prevous or following URN?
+
+{>> CWB: I would like one more piece of information at the top: "requestUrn". If I ask for *Iliad* 1, or *Iliad* 1.1-1.611, the array of Citable Nodes will be the same, but I would like to have in the reply the request-URN.  <<}

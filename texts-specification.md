@@ -45,6 +45,15 @@ The `texts` microservice works with the smallest unit of the OHCO2 model: citabl
 | `/texts/next/{URN}`     | retrieve node following {URN}                     | 0 or 1 citable node                             |
 
 
+> **Concerning `prev` and `next`.** When the request-parameter is a URN identifying a single Citable Node, each returns either a URN identifying a single citable node, or `null`. But what is the proper reply when the request is a Range or Containing URN? These are two different cases.
+
+> **Ranges** `texts/next/urn:cts:greekLit:tlg0012.tlg001.msA:1.1-1.5` identifies (in this particular instance) five Citable Nodes. The proper reply is the set of citable nodes that can be identified by the URN `urn:cts:greekLit:tlg0012.tlg001.msA:1.6-1.10`. That is, `next` yields *the next N citable nodes, where N is the number of citable nodes identified by the request-URN*. If there are not N citable nodes remaining in the text, `next` returns as many as are present.
+
+> **Containing URNs** `texts/next/urn:cts:greekLit:tlg0012.tlg001.msA:1` should yield the Citable Nodes that would be the response to `texts/urn:cts:greekLit:tlg0012.tlg001.msA:2`. Obviously `texts/next/urn:cts:greekLit:tlg0012.tlg001.msA:24` would yield `null`.
+
+> **Ranges of Containing URNs** `texts/next/urn:cts:greekLit:tlg0012.tlg001.msA:1-2`. I would like to see this yield the Citable Nodes identified by `texts/next/urn:cts:greekLit:tlg0012.tlg001.msA:3-4`.
+
+
 ## Replies
 
 
