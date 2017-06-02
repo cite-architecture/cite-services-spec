@@ -13,6 +13,10 @@
 
 
 
+## Relation to CEX
+
+The `texts` microservice works with content encoded in CEX in a `ctsdata` block.
+
 
 ## Data model
 
