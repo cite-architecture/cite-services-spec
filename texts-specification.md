@@ -13,15 +13,6 @@
 
 
 
-## Basic architecture
-
-0. Requests and replies are exchanged using HTTP.
-1. Requests are formatted as URLs with no request parameters, structured as documented in this specification.
-2. Replies are structured in a dynamically specified format chosen from a set of defined options, or in a defined *default* format.
-
->Suggested formats to support: json, line-oriented delimited text.
-> Suggested default: json.
-
 
 ## Data model
 
