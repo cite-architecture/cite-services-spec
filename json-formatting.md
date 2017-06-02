@@ -6,7 +6,7 @@
 
 In formatting  JSON replies, what the specification calls "lists" will be JSON arrays.  URNs will be string values.  Citable nodes will be json "objects" (what I've called "maps") with five member objects.
 
-The reply itself is presumably a JSON object.  We need some good way to send back both exceptions and valid results.  Mapbye the object always has a "status" member, that can have one of two values (mabye "exception" or "success" ?)  Exceptions could then have a single "
+The reply itself is presumably a JSON object.  We need some good way to send back both exceptions and valid results.  {==Maybe the object always has a "status" member, that can have one of two values (mabye "exception" or "success" ?)  Exceptions could then have a single "==}{>>I feel uneasy about this. I'd prefer if the reponse has the same struture. We could include a status field for all of them that either returns "succes" or "exception: Invalid URN valid 'xyz". TK.<<}
 
 
 
