@@ -49,15 +49,6 @@ The `texts` microservice works with the smallest unit of the OHCO2 model: citabl
 | `/texts/previous/{URN}` | retrieve node preceding {URN}                     | 0 or 1 citable node                             |
 | `/texts/next/{URN}`     | retrieve node following {URN}                     | 0 or 1 citable node                             |
 
-{++ 
-
-| URL                   | Meaning                                           | Return value                                    |
-|:----------------------|:--------------------------------------------------|:------------------------------------------------|
-| /texts/urns/{URN}     | retrieve a list of URNs                           | (possibly empty, ordered) list of URNs          |
-
-{>> CWB: For efficiency, it would be helpful to have the option to get URNs alone, without having to retrieve full citable nodes <<}
-
-++}
 
 ## Replies
 
