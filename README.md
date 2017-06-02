@@ -13,7 +13,6 @@ We want to design microservices that function like traditional UNIX programs, in
 - can therefore be composed to create larger structures
 
 
-
 ## Basic architecture
 
 0. Requests and replies are exchanged using HTTP.
