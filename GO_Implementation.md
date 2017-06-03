@@ -51,6 +51,7 @@ func main() {
 	fmt.Println(string(ListURNJSON))
 
 	CitNodes := &TextResponse{
+		RequestUrn: "URN1:1.1",
 		Status: "Success",
 		Nodes: []Node{Node{URN: "URN1:1.1", Text: "String Value", Previous: "", Next: "URN1:1.2", Index: 1}},
 	}
