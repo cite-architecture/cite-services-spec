@@ -69,19 +69,19 @@ I'm guessing we're looking at something like this:
     }
     {>>TK: I suggest
     ```json
-    {  
-   "status":"Success",
-   "Nodes":[  
-      {  
-         "URN":"URN1:1.1",
-         "text":"String Value",
-         "previous":"",
-         "next":"URN1:1.2",
-         "index":1
-      }
-   ]
-}   
-```
+    {
+        "status":"Success",
+        "Nodes":[
+                    {
+                        "URN":"URN1:1.1",
+                        "text":"String Value",
+                        "previous":"",
+                        "next":"URN1:1.2",
+                        "index":1
+                    }
+                ]
+    }
+    ```
     <<<}
 
 Should previous/following values be a JSON empty string or a `null` value when there is no prevous or following URN?
