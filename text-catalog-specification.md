@@ -41,6 +41,8 @@ The `texts` service, the request URL can assume the following patterns (where `{
 |:------------------------|:--------------------------------------------------|:------------------------------------------------|
 | `/textcatalog`                | lists the set of catalog entries for all cataloged texts | (unordered) list of work-level URNs             |
 | `/textcatalog/{URN}`          | lists catalog entries matching the given URN                        | (possibly empty, ordered) list of ccatalog entries |
+| `textcatalog/size` | gives the  number of catalog entries in the catalog | an integer value |
+| `textcatalog/size/{URN}` | gives the  number of catalog entries matching the given URN | an integer value |
 | `textcatalog/version` | gives the  version of the specification implemented | a string in semantic version format |
 
 The `/textcatalog` request returns the full set of cataloged entries.
