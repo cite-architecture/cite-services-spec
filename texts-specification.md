@@ -1,9 +1,11 @@
 # `texts` microservice
 
->Sections of this document formatted like this (markdown quoted blocks) are used for **proposed** content.  Comments solicited!
->
-> Suggested formatting of comments:  [Critic Markup](http://criticmarkup.com/), with editing history maintained by your version control system.
 
+
+> ## Version and status
+>
+>This document specifies version **1.0.0** of the `texts` microservice.
+> It is in **draft** status.
 
 
 ## What it does
@@ -47,6 +49,8 @@ The `texts` service, the request URL can assume the following patterns (where `{
 | `/texts/previous/{URN}` | retrieve node preceding {URN}                     | (possibly empty, ordered) list of citable nodes                             |
 | `/texts/next/{URN}`     | retrieve node following {URN}                     | (possibly empty, ordered) list of citable nodes                                |
 
+
+> I'd like one further request:  `texts/version` giving the version of the services specification implemented.  Specifications should be identified with semantic versioning. When we get to an iniital release, we would begin with `1.0.0`.
 
 When the value `{URN}` identifies a single citable node, the requests `texts`, `texts/previous` and `texts/next` will each return 0 or 1 citable node.
 
