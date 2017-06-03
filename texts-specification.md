@@ -2,10 +2,11 @@
 
 
 
-> ## Version and status
->
->This document specifies version **1.0.0** of the `texts` microservice.
-> It is in **draft** status.
+## Version and status
+
+Versions of this specification are identified according to [semantic versioning](http://semver.org/).
+
+This document specifies release version **1.0.0** of the `texts` microservice.
 
 
 ## What it does
@@ -38,6 +39,7 @@ In `texts` microservice, request URLs  can assume the following patterns (where 
 
 | URL                     | Meaning                                           | Return value                                    |
 |:------------------------|:--------------------------------------------------|:------------------------------------------------|
+| `/texts/version`     | implemented version of texts microservice specification                  | a string in [semantic versioning](http://semver.org/) format |
 | `/texts`                | list distinct works appearing in cited text nodes | (unordered) list of work-level URNs             |
 | `/texts/{URN}`          | retrieve a passage of text                        | (possibly empty, ordered) list of citable nodes |
 | `/texts/first/{URN}`    | retrieve first node of text                       | 0 or 1 citable node                             |
@@ -46,7 +48,6 @@ In `texts` microservice, request URLs  can assume the following patterns (where 
 | `/texts/next/{URN}`     | retrieve node following {URN}                     | (possibly empty, ordered) list of citable nodes |
 
 
-> I'd like one further request:  `texts/version` giving the version of the services specification implemented.  Specifications should be identified with semantic versioning. When we get to an iniital release, we would begin with `1.0.0`.
 
 When the value `{URN}` identifies a single citable node, the requests `texts`, `texts/previous` and `texts/next` will each return 0 or 1 citable node.
 
