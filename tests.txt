@@ -1,0 +1,136 @@
+#--------------------------
+
+#Data
+
+test1.cex
+
+#Request
+
+/texts
+
+#Reply
+
+[Set]
+
+urn:cts:citeArch:groupA.work1.ed1:    
+urn:cts:citeArch:groupA.work1.ed2:    
+urn:cts:citeArch:groupA.work1.ed2.ex1:
+urn:cts:citeArch:groupA.work2.ed1:   
+
+#--------------------------
+
+#Data
+
+test1.cex
+
+#Request
+
+/texts/urn:cts:citeArch:groupA.work1.ed1:1.1
+
+#Reply
+
+[Literal]
+
+urn:cts:citeArch:groupA.work1.ed1:1.1#Edition One. 1 point 1.
+
+#--------------------------
+
+#Data
+
+test1.cex
+
+#Request
+
+/texts/urn:cts:citeArch:groupA.work1.ed1:1
+
+#Reply
+
+[Literal]
+
+urn:cts:citeArch:groupA.work1.ed1:1.1#Edition One. 1 point 1.
+urn:cts:citeArch:groupA.work1.ed1:1.2#Edition One. 1 point 2.
+urn:cts:citeArch:groupA.work1.ed1:1.3#Edition One. 1 point 3.
+
+#--------------------------
+
+#Data
+
+test1.cex
+
+#Request
+
+/texts/urn:cts:citeArch:groupA.work1.ed1:1.1-1.3`
+
+#Reply
+
+[Literal]
+
+urn:cts:citeArch:groupA.work1.ed1:1.1#Edition One. 1 point 1.
+urn:cts:citeArch:groupA.work1.ed1:1.2#Edition One. 1 point 2.
+urn:cts:citeArch:groupA.work1.ed1:1.3#Edition One. 1 point 3.
+
+#--------------------------
+
+#Data
+
+test1.cex
+
+#Request
+
+/texts/urn:cts:citeArch:groupA.work1:1.1-1.2
+
+#Reply
+
+[Set]
+
+	[Literal]
+	urn:cts:citeArch:groupA.work1.ed1:1.1#Edition One. 1 point 1.
+	urn:cts:citeArch:groupA.work1.ed1:1.2#Edition One. 1 point 2.
+
+	[Literal]
+	urn:cts:citeArch:groupA.work1.ed2:1.1#Edition Two. 1 point 1.
+	urn:cts:citeArch:groupA.work1.ed2:1.2#Edition Two. 1 point 2.
+
+	[Literal]
+	urn:cts:citeArch:groupA.work1.ed2.ex1:1.1#Edition Two, Exemplar 1. 1 point 1.
+	urn:cts:citeArch:groupA.work1.ed2.ex1:1.2#Edition Two, Exemplar 1. 1 point 2.
+
+#--------------------------
+
+#Data
+
+test1.cex
+
+#Request
+
+/texts/urn:cts:citeArch:groupA.work1.ed1:1-2.2
+
+#Reply
+
+[Literal]
+
+urn:cts:citeArch:groupA.work1.ed1:1.1#Edition One. 1 point 1.
+urn:cts:citeArch:groupA.work1.ed1:1.2#Edition One. 1 point 2.
+urn:cts:citeArch:groupA.work1.ed1:1.3#Edition One. 1 point 3.
+urn:cts:citeArch:groupA.work1.ed1:2.1#Edition One. 2 point 1.
+urn:cts:citeArch:groupA.work1.ed1:2.2#Edition One. 2 point 2.
+
+#--------------------------
+
+#Data
+
+test1.cex
+
+#Request
+
+/texts/urn:cts:citeArch:groupA.work1.ed1:1.3-2
+
+#Reply
+
+[Literal]
+
+urn:cts:citeArch:groupA.work1.ed1:1.3#Edition One. 1 point 3.
+urn:cts:citeArch:groupA.work1.ed1:2.1#Edition One. 2 point 1.
+urn:cts:citeArch:groupA.work1.ed1:2.2#Edition One. 2 point 2.
+urn:cts:citeArch:groupA.work1.ed1:2.3#Edition One. 2 point 3.
+

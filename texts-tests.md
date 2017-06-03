@@ -38,7 +38,7 @@
 |                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:1.2`     |
 |                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:1.3`     |
 |                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:2.1`     |
-|                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:2.3`     |
+|                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:2.2`     |
 | <resources/test1.cex>    | `/texts/urn:cts:citeArch:groupA.work1.ed1:1.3-2`   | Citable Nodes for                                 |
 |                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:1.3`     |
 |                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:2.1`     |
