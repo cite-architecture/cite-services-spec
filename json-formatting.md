@@ -18,6 +18,12 @@ I'm guessing we're looking at something like this:
       "status": "success"
       {}
     }
+    
+    {>>TK: I suggest
+    ```json
+    {"status":"success"}    
+    ```
+    <<<}
 
 2. An exception
 
@@ -26,6 +32,12 @@ I'm guessing we're looking at something like this:
       "status": "exception"
       "message": "Invalid URN valid 'xyz'"
     }
+    
+    {>>TK: Should be
+    ```json
+    {"status":"Exception","message":"Invalid URN valid 'xyz'"}
+    ```
+    <<<}
 
 3. A list of URN values
 
@@ -36,6 +48,11 @@ I'm guessing we're looking at something like this:
         `URN2`
       }
     }
+    {>>TK: I suggest
+    ```json
+    {"status":"Success","URN":["URN1","URN2"]}
+    ```
+    <<<}
 
 4. A list of citable nodes
 
@@ -50,7 +67,25 @@ I'm guessing we're looking at something like this:
           "sequence" : `JSON int or intface VALUE`,
       }
     }
+    {>>TK: I suggest
+    ```json
+    {
+        "requestUrn":"URN1:1.1",
+        "status":"Success",
+        "Nodes":[
+                    {
+                        "URN":"URN1:1.1",
+                        "text":"String Value",
+                        "previous":"",
+                        "next":"URN1:1.2",
+                        "index":1
+                    }
+                ]
+    }
+    ```
+    <<<}
 
 Should previous/following values be a JSON empty string or a `null` value when there is no prevous or following URN?
 
 {>> CWB: I would like one more piece of information at the top: "requestUrn". If I ask for *Iliad* 1, or *Iliad* 1.1-1.611, the array of Citable Nodes will be the same, but I would like to have in the reply the request-URN.  <<}
+{>>TK: +1 <<}}
