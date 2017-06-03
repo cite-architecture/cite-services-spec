@@ -34,11 +34,7 @@ In the `text` microservice, citable nodes are modelled as objects with five prop
 
 ## Request syntax and return values
 
-The general syntax of a request in CITE microservices is
-
-    /service name/request?/URN value?/format?
-
-The `texts` service, the request URL can assume the following patterns (where `{URN}` stands for a syntactically valid URN string).
+In `texts` microservice, request URLs  can assume the following patterns (where `{URN}` stands for a syntactically valid URN string):
 
 | URL                     | Meaning                                           | Return value                                    |
 |:------------------------|:--------------------------------------------------|:------------------------------------------------|
@@ -46,8 +42,8 @@ The `texts` service, the request URL can assume the following patterns (where `{
 | `/texts/{URN}`          | retrieve a passage of text                        | (possibly empty, ordered) list of citable nodes |
 | `/texts/first/{URN}`    | retrieve first node of text                       | 0 or 1 citable node                             |
 | `/texts/last/{URN}`     | retrieve last node of text                        | 0 or 1 citable node                             |
-| `/texts/previous/{URN}` | retrieve node preceding {URN}                     | (possibly empty, ordered) list of citable nodes                             |
-| `/texts/next/{URN}`     | retrieve node following {URN}                     | (possibly empty, ordered) list of citable nodes                                |
+| `/texts/previous/{URN}` | retrieve node preceding {URN}                     | (possibly empty, ordered) list of citable nodes |
+| `/texts/next/{URN}`     | retrieve node following {URN}                     | (possibly empty, ordered) list of citable nodes |
 
 
 > I'd like one further request:  `texts/version` giving the version of the services specification implemented.  Specifications should be identified with semantic versioning. When we get to an iniital release, we would begin with `1.0.0`.

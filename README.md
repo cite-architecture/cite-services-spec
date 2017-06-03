@@ -16,7 +16,7 @@ We want to design microservices that function like traditional UNIX programs, in
 ## Basic architecture
 
 0. Requests and replies are exchanged using HTTP.
-1. Requests are formatted as URLs with no request parameters, structured as documented in this specification.
+1. Requests are formatted as URLs with no request parameters, structured as documented in this specification.  The general syntax of a request in CITE microservices is `/service name/request?/URN value?/format?`.
 2. Replies are structured in a dynamically specified format chosen from a set of defined options, or in a defined *default* format.
 
 > Suggested formats to support: json, line-oriented delimited text.
