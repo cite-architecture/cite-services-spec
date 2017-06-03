@@ -25,7 +25,7 @@ We want to design microservices that function like traditional UNIX programs, in
 
 ## Initial specifications
 
-We are working first on a `texts` microservice.  See draft notes [here](texts-specification.md)
+We are working first on a `texts` microservice.  See [current draft specification](texts-specification.md)
 
 
 ## Planned specifications
@@ -37,7 +37,3 @@ We are working first on a `texts` microservice.  See draft notes [here](texts-sp
 - `citeextensions` microservice
 - `dse` microservice
 - `orca` microservice
-
-## Status
-
-Early discussions only.

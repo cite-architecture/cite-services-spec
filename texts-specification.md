@@ -28,8 +28,8 @@ In the `text` microservice, citable nodes are modelled as objects with five prop
 
 1. an identifying URN
 2. text contents of the node
-3. URN of the preceding node, or null
-4. URN of the following node, or null
+3. URN of the preceding node, or null value
+4. URN of the following node, or null value
 5. a numeric sequence value that can be used to sort a set of nodes into document order
 
 ## Request syntax and return values
@@ -69,16 +69,19 @@ In all cases, lists of more than one citable node are given in document order.
 
 ### JSON
 
-> JSON is the default reply format.
->
-> URNs are serialized as String values following the CTS URN specification.
-> Citable nodes are serialized as a Map of five values labelled
->
->     1. `URN`
->     2. `text`
->     3. `previous`
->     4. `following`
->     5. `sequence`
+URNs are serialized as String values following the CTS URN specification.
+Citable nodes are serialized as a Map of five values labelled:
+
+1. `URN`
+2. `text`
+3. `previous`
+4. `following`
+5. `sequence`
+
+
+### Default format
+
+JSON is the default reply forma (and currently the only defined format).
 
 ## Exceptions
 
