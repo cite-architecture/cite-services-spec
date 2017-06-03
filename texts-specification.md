@@ -69,7 +69,10 @@ In all cases, lists of more than one citable node are given in document order.
 
 ### JSON
 
+Replies are single JSON objects.
+
 URNs are serialized as String values following the CTS URN specification.
+
 Citable nodes are serialized as a Map of five values labelled:
 
 1. `URN`
