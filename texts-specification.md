@@ -4,10 +4,7 @@
 
 ## Version and status
 
-Versions of this specification are identified according to [semantic versioning](http://semver.org/).
-
-This document specifies release version **1.0.0** of the `texts` microservice.
-
+This document specifies release version **1.0.0** of the `texts` microservice. Versions of this specification are identified according to [semantic versioning](http://semver.org/).
 
 ## What it does
 

@@ -16,7 +16,7 @@ This document specifies version **1.0.0** of the `textcatalog` microservice. It 
 
 ## Relation to CEX
 
-The `textcatalog` microservice works with content encoded in CEX in a `ctscatalog` block.
+The `textcatalog` microservice works with content encoded in CEX in a `ctscatalog` block (version 2.x of the CEX specification).
 
 
 ## Data model
