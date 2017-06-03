@@ -7,6 +7,7 @@ To express the [requirements for the JSON format](https://github.com/cite-archit
 1. A TextResponse struct:
   ```go
   type TextResponse struct {
+    RequestUrn string`json:"requestUrn,omitempty"`
     Status string`json:"status"`
     Message string `json:"message,omitempty"`
     URN []string `json:",omitempty"`
@@ -50,6 +51,7 @@ func main() {
 	fmt.Println(string(ListURNJSON))
 
 	CitNodes := &TextResponse{
+		RequestUrn: "URN1:1.1",
 		Status: "Success",
 		Nodes: []Node{Node{URN: "URN1:1.1", Text: "String Value", Previous: "", Next: "URN1:1.2", Index: 1}},
 	}
@@ -63,5 +65,5 @@ func main() {
 {"status":"Success"}
 {"status":"Exception","message":"Invalid URN valid 'xyz'"}
 {"status":"Success","URN":["URN1","URN2"]}
-{"status":"Success","Nodes":[{"URN":"URN1:1.1","text":"String Value","previous":"","next":"URN1:1.2","index":1}]}
+{"requestUrn":"URN1:1.1","status":"Success","Nodes":[{"URN":"URN1:1.1","text":"String Value","previous":"","next":"URN1:1.2","index":1}]}
 ```
