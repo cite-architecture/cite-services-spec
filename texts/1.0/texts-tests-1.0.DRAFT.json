@@ -1,6 +1,6 @@
 [{
-    "testID": "unique identifier for this test",
-    "testdata": "URL to test1.cex",
+    "testID": "urn:cite:cite:tests.2017a:texts01",
+    "testdata": "https://raw.githubusercontent.com/cite-architecture/cite-services-spec/master/texts/1.0/resources/test1.cex",
     "request": "/texts",
     "resultType": "set",
     "reply": {
