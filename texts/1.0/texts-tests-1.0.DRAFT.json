@@ -1,6 +1,20 @@
-[{
+[
+  {
+    "testSuite" : "",
+    "testData" :  "https://raw.githubusercontent.com/cite-architecture/cite-services-spec/master/texts/1.0/resources/test1.cex"
+  },
+
+  {
     "testID": "urn:cite:cite:tests.2017a:texts01",
-    "testdata": "https://raw.githubusercontent.com/cite-architecture/cite-services-spec/master/texts/1.0/resources/test1.cex",
+    "request": "/cite",
+    "resultType": "literal",
+    "reply": {
+        "status": "success",
+        "version":  "1.0.0"
+    }
+},
+{
+    "testID": "urn:cite:cite:tests.2017a:texts02",
     "request": "/texts",
     "resultType": "set",
     "reply": {
@@ -12,4 +26,6 @@
             "urn:cts:citeArch:groupA.work2.ed1:"
         ]
     }
-}]
+}
+
+]
