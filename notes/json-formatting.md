@@ -18,26 +18,22 @@ I'm guessing we're looking at something like this:
       "status": "success"
       {}
     }
-    
+
     {>>TK: I suggest
     ```json
-    {"status":"success"}    
+    {"status":"success"}
     ```
-    <<<}
+    <<<}  {>> NS:  Can you elaborate on why this is better? <<}
 
 2. An exception
 
 
     {
-      "status": "exception"
-      "message": "Invalid URN valid 'xyz'"
+      "status": "exception",
+      "message": "Invalid URN value 'xyz'"
     }
-    
-    {>>TK: Should be
-    ```json
-    {"status":"Exception","message":"Invalid URN valid 'xyz'"}
-    ```
-    <<<}
+
+
 
 3. A list of URN values
 
