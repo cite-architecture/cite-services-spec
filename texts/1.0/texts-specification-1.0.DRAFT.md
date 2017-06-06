@@ -75,7 +75,7 @@ Citable nodes are serialized as a Map of five values.  {++ The list is labelled 
 1. `URN`
 2. `text`
 3. `previous`
-4. `following`
+4. `next`
 5. `sequence`
 
 
