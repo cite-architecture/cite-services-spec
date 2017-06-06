@@ -1,31 +1,29 @@
-[
-  {
-    "testSuite" : "",
-    "testData" :  "https://raw.githubusercontent.com/cite-architecture/cite-services-spec/master/texts/1.0/resources/test1.cex"
-  },
-
-  {
-    "testID": "urn:cite:cite:tests.2017a:texts01",
-    "request": "/cite",
-    "resultType": "literal",
-    "reply": {
-        "status": "success",
-        "version":  "1.0.0"
-    }
-},
 {
-    "testID": "urn:cite:cite:tests.2017a:texts02",
-    "request": "/texts",
-    "resultType": "set",
-    "reply": {
-        "status": "success",
-        "URNs": [
-            "urn:cts:citeArch:groupA.work1.ed1:",
-            "urn:cts:citeArch:groupA.work1.ed2:",
-            "urn:cts:citeArch:groupA.work1.ed2.ex1:",
-            "urn:cts:citeArch:groupA.work2.ed1:"
-        ]
+    "testSuite" : "urn:cite:cite:tests.2017a:",
+    "testData" :  "https://raw.githubusercontent.com/cite-architecture/cite-services-spec/master/texts/1.0/resources/test1.cex",
+    "tests" :   [
+      {
+      "testID": "urn:cite:cite:tests.2017a:texts01",
+      "request": "/cite",
+      "resultType": "literal",
+      "reply": {
+          "status": "success",
+          "version":  "1.0.0"
+        }
+      },
+      {
+      "testID": "urn:cite:cite:tests.2017a:texts02",
+      "request": "/texts",
+      "resultType": "set",
+      "reply": {
+          "status": "success",
+          "URNs": [
+              "urn:cts:citeArch:groupA.work1.ed1:",
+              "urn:cts:citeArch:groupA.work1.ed2:",
+              "urn:cts:citeArch:groupA.work1.ed2.ex1:",
+              "urn:cts:citeArch:groupA.work2.ed1:"
+          ]
+      }
     }
+  ]
 }
-
-]
