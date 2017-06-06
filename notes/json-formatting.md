@@ -8,7 +8,7 @@ In formatting  JSON replies, what the specification calls "lists" will be JSON a
 
 The reply itself is presumably a JSON object.  We need some good way to send back both exceptions and valid results.  {==Maybe the object always has a "status" member, that can have one of two values (mabye "exception" or "success" ?)  Exceptions could then have a single "==}{>>I feel uneasy about this. I'd prefer if the reponse has the same struture. We could include a status field for all of them that either returns "succes" or "exception: Invalid URN valid 'xyz". TK.<<}
 
-
+{>> I think I'm comfortable with this.  In any event, we need 3 distinct kinds of replies:  successfuly reply with list of URNs, successful reply with list of citable node objects, and exceptions.  <<}
 
 I'm guessing we're looking at something like this:
 
@@ -23,7 +23,17 @@ I'm guessing we're looking at something like this:
     ```json
     {"status":"success"}
     ```
-    <<<}  {>> NS:  Can you elaborate on why this is better? <<}
+    <<<}  {>> NS:  Can you elaborate on why this is better
+  Here's what I intended but didn't say:
+  ```json
+  {"status": "success", "URN": {} }
+  ```
+  or
+  ```json
+  {"status": "success", "Nodes": {} }
+  ```
+
+    ? <<}
 
 2. An exception
 
@@ -38,23 +48,21 @@ I'm guessing we're looking at something like this:
 3. A list of URN values
 
     {
-      "status": "success"
+      "status": "success",
+      "URN" :
       {
         `URN1`,
         `URN2`
       }
     }
-    {>>TK: I suggest
-    ```json
-    {"status":"Success","URN":["URN1","URN2"]}
-    ```
-    <<<}
+
 
 4. A list of citable nodes
 
 
     {
-      "status": "success"
+      "status": "success",
+      Nodes:
       {
         { "URN" : `URN1`,
           "text" : `STRING VALUE`,
@@ -63,23 +71,7 @@ I'm guessing we're looking at something like this:
           "sequence" : `JSON int or intface VALUE`,
       }
     }
-    {>>TK: I suggest
-    ```json
-    {
-        "requestUrn":"URN1:1.1",
-        "status":"Success",
-        "Nodes":[
-                    {
-                        "URN":"URN1:1.1",
-                        "text":"String Value",
-                        "previous":"",
-                        "next":"URN1:1.2",
-                        "index":1
-                    }
-                ]
-    }
-    ```
-    <<<}
+
 
 Should previous/following values be a JSON empty string or a `null` value when there is no prevous or following URN?
 

@@ -64,9 +64,13 @@ In all cases, lists of more than one citable node are given in document order.
 
 Replies are single JSON objects.
 
-URNs are serialized as String values following the CTS URN specification.
+Every reply has a property labelled `status` with one of two allowed values:  `success` or `exception`.
 
-Citable nodes are serialized as a Map of five values labelled:
+All replies to requests that include a `{URN}` value in their URL path have a property labelled `requestUrn` with the String value of the `{URN}` component of the request path.
+
+URNs are serialized as String values following the CTS URN specification.  {++ The list of URN values is labelled `URNs`. ++}
+
+Citable nodes are serialized as a Map of five values.  {++ The list is labelled `Nodes`. The invidivual properties are labelled: ++}
 
 1. `URN`
 2. `text`
@@ -77,7 +81,7 @@ Citable nodes are serialized as a Map of five values labelled:
 
 ### Default format
 
-JSON is the default reply forma (and currently the only defined format).
+JSON is the default reply format (and currently the only defined format).
 
 ## Exceptions
 
