@@ -1,0 +1,15 @@
+[{
+    "testID": "unique identifier for this test",
+    "testdata": "URL to test1.cex",
+    "request": "/texts",
+    "resultType": "set",
+    "reply": {
+        "status": "success",
+        "URNs": [
+            "urn:cts:citeArch:groupA.work1.ed1:",
+            "urn:cts:citeArch:groupA.work1.ed2:",
+            "urn:cts:citeArch:groupA.work1.ed2.ex1:",
+            "urn:cts:citeArch:groupA.work2.ed1:"
+        ]
+    }
+}]
