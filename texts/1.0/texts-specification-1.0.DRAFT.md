@@ -43,8 +43,7 @@ In `texts` microservice, request URLs  can assume the following patterns (where 
 | `/texts/last/{URN}`     | retrieve last node of text                        | 0 or 1 citable node                             |
 | `/texts/previous/{URN}` | retrieve node preceding {URN}                     | (possibly empty, ordered) list of citable nodes |
 | `/texts/next/{URN}`     | retrieve node following {URN}                     | (possibly empty, ordered) list of citable nodes |
-
-
+| `/texts/urns/{URN}`     | resolves {URN} to a list of URNs                    | (possibly empty, ordered) list of URNs |
 
 When the value `{URN}` identifies a single citable node, the requests `texts`, `texts/previous` and `texts/next` will each return 0 or 1 citable node.
 
