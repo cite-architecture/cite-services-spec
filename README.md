@@ -22,8 +22,8 @@ We want to design microservices that function like traditional UNIX programs, in
 
 ## Initial specifications
 
-- `texts` microservice.  Current version: **1.0.0**. See the [specification](texts-specification.md).
-- `textcatalog` microservice. See an [initial draft for discussion](text-catalog-specification.md).
+- `texts` microservice.  Current version: **1.0.0**. See the [specification](texts/1.0/texts-specification-1.0.DRAFT.md).
+- `textcatalog` microservice. See an [initial draft for discussion](textcatalog/1.0/textcatalog-specification-1.0.DRAFT.md).
 
 ## Planned specifications
 

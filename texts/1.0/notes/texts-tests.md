@@ -1,8 +1,6 @@
 # `texts` tests
 
->Sections of this document formatted like this (markdown quoted blocks) are used for **proposed** content.  Comments solicited!
->
-> Suggested formatting of comments:  [Critic Markup](http://criticmarkup.com/), with editing history maintained by your version control system.
+{++ I'll work these into the suggested .json format (NS) ++}
 
 ## Test Data
 
@@ -44,8 +42,3 @@
 |                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:2.1`     |
 |                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:2.2`     |
 |                          |                                                    |       `urn:cts:citeArch:groupA.work1.ed1:2.3`     |
-
-
-
-
-
