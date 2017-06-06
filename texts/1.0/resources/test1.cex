@@ -4,17 +4,17 @@
 
 
 #!cexversion
-1.1
+2.0
 #!citelibrary
 name#CTS Test 1
 urn#urn:cite2:citearch:ctsTest.v1:basic
 license#CC Share Alike. For details, see more info.
 #!ctscatalog
-urn#citationScheme#groupName#workTitle#versionLabel#exemplarLabel#online
-urn:cts:citeArch:groupA.work1.ed1:#book/section#Group A#Work 1#Edition 1##true
-urn:cts:citeArch:groupA.work1.ed2:#book/section#Group A#Work 1#Edition 2##true
-urn:cts:citeArch:groupA.work1.ed2.ex1:#book/section#Group A#Work 1#Edition 1#Exemplar 1#true
-urn:cts:citeArch:groupA.work2.ed1:#book/section#Group A#Work 2#Edition 1##true
+urn#citationScheme#groupName#workTitle#versionLabel#exemplarLabel#online#lang
+urn:cts:citeArch:groupA.work1.ed1:#book,section#Group A#Work 1#Edition 1##true#eng
+urn:cts:citeArch:groupA.work1.ed2:#book,section#Group A#Work 1#Edition 2##true#eng
+urn:cts:citeArch:groupA.work1.ed2.ex1:#book,section#Group A#Work 1#Edition 1#Exemplar 1#true#eng
+urn:cts:citeArch:groupA.work2.ed1:#book,section#Group A#Work 2#Edition 1##true#eng
 #!ctsdata
 urn:cts:citeArch:groupA.work1.ed1:1.1#Edition One. 1 point 1.
 urn:cts:citeArch:groupA.work1.ed1:1.2#Edition One. 1 point 2.
