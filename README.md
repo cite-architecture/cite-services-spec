@@ -20,10 +20,13 @@ We want to design microservices that function like traditional UNIX programs, in
 2. Replies are structured in a dynamically specified format chosen from a set of defined options, or in a defined *default* format.  At present, the only defined format is the default JSON format.
 
 
-## Initial specifications
+## Initial specifications and implementations
 
 - `texts` microservice.  Current version: **1.0.0**. See the [specification](texts/1.0/texts-specification-1.0.DRAFT.md).
 - `textcatalog` microservice. See an [initial draft for discussion](textcatalog/1.0/textcatalog-specification-1.0.DRAFT.md).
+
+A reference implementation is in development, and is available from [this github repository](https://github.com/cite-architecture/citemicroservices).
+
 
 ## Planned specifications
 
