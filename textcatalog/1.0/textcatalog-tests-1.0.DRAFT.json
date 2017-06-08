@@ -1,0 +1,63 @@
+{
+  "testSuite": "urn:cite:cite:textacatalogtests.2017a:",
+  "testData": "https://raw.githubusercontent.com/cite-architecture/cite-services-spec/master/texts/1.0/resources/test1.cex",
+  "tests": [{
+      "test": {
+        "testID": "urn:cite:cite:textacatalogtests.2017a:textcat01",
+        "label": "Request CTS URNs of cataloged texts",
+        "request": "/textcatalog/urns",
+        "resultType": "set",
+        "reply": {
+          "status": "success",
+          "service": "/textcatalog",
+          "requestUrn": [],
+          "urns": ["urn:cts:citeArch:groupA.work1:", "urn:cts:citeArch:groupA.work2:"]
+        }
+      }
+    },
+
+    {
+      "testID": "urn:cite:cite:textacatalogtests.2017a:textcat02",
+      "label": "Request for work-level URN matching multiple texts",
+      "request": "/textcatalog",
+      "resultType": "literal",
+      "reply": {
+        "status": "success",
+        "service": "/textcatalog",
+        "requestUrn": ["urn:cts:citeArch:groupA.work1:"],
+        "texts": [{
+            "urn": "urn:cts:citeArch:groupA.work1.ed1:",
+            "citation": ["book", "section"],
+            "group": "Group A",
+            "work": "Work 1",
+            "edition": "Edition 1",
+            "exemplar": [],
+            "online": "true",
+            "language": "eng"
+          },
+          {
+            "urn": "urn:cts:citeArch:groupA.work1.ed2:",
+            "citation": ["book", "section"],
+            "group": "Group A",
+            "work": "Work 1",
+            "edition": "Edition 2",
+            "exemplar": [],
+            "online": "true",
+            "language": "eng"
+          },
+          {
+            "urn": "urn:cts:citeArch:groupA.work1.ed2.ex1:",
+            "citation": ["book", "section"],
+            "group": "Group A",
+            "work": "Work 1",
+            "edition": "Edition 2",
+            "exemplar": ["Exemplar 1"],
+            "online": "true",
+            "language": "eng"
+          }
+        ]
+      }
+
+    }
+  ]
+}

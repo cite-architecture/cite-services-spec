@@ -1,30 +1,38 @@
 {
-    "testSuite" : "urn:cite:cite:tests.2017a:",
-    "testData" :  "https://raw.githubusercontent.com/cite-architecture/cite-services-spec/master/texts/1.0/resources/test1.cex",
-    "tests" :   [
-      { "test": {
-      "testID": "urn:cite:cite:tests.2017a:texts01",
-      "request": "/cite",
-      "resultType": "literal",
-      "reply": {
+  "testSuite": "urn:cite:cite:textstests.2017a:",
+  "testData": "https://raw.githubusercontent.com/cite-architecture/cite-services-spec/master/texts/1.0/resources/test1.cex",
+  "tests": [{
+      "test": {
+        "testID": "urn:cite:cite:textstests.2017a:texts01",
+        "label": "Request versions of cite services",
+        "request": "/cite",
+        "resultType": "literal",
+        "reply": {
           "status": "success",
-          "version":  "1.0.0"
+          "service": "/texts",
+          "texts": "1.0.0"
         }
       }
-      },
-    {"test":  {
-      "testID": "urn:cite:cite:tests.2017a:texts02",
-      "request": "/texts",
-      "resultType": "set",
-      "reply": {
+    },
+    {
+      "test": {
+        "testID": "urn:cite:cite:textstests.2017a:texts02",
+        "label": "Request set of citable works",
+        "request": "/texts",
+        "resultType": "set",
+
+        "reply": {
           "status": "success",
+          "service": "/texts",
+          "requestUrn": [],
           "URNs": [
-              "urn:cts:citeArch:groupA.work1.ed1:",
-              "urn:cts:citeArch:groupA.work1.ed2:",
-              "urn:cts:citeArch:groupA.work1.ed2.ex1:",
-              "urn:cts:citeArch:groupA.work2.ed1:"
+            "urn:cts:citeArch:groupA.work1.ed1:",
+            "urn:cts:citeArch:groupA.work1.ed2:",
+            "urn:cts:citeArch:groupA.work1.ed2.ex1:",
+            "urn:cts:citeArch:groupA.work2.ed1:"
           ]
+        }
       }
     }
-}  ]
+  ]
 }
